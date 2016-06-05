@@ -1,0 +1,50 @@
+﻿@model Movies.Models.RepositoryModel.MovieModel
+@{
+	var videoUrl = "http://www.youtube.com/embed/" + Model.EmbededTrailer;
+}
+
+<div class="container">
+     <div class="row">
+         <div class="col-md-4">
+             <img src="@Model.PosterUrl" class="img-rounded" alt="@Model.Title" height="200" width="150"/>
+         </div>
+         <div id="VideoInfo" class="col-md-8 Video-Form">
+             <div class="control-group">
+				<ul class="share-buttons">
+				  <li><a href="https://www.facebook.com/sharer/sharer.php?u=@videoUrl&t=@Model.Title" title="Share on Facebook" target="_blank"><img src="/Content/images/Facebook.png"></a></li>
+				  <li><a href="https://twitter.com/intent/tweet?source=@videoUrl&text=@Model.Title:@videoUrl&via=MovieAPP" target="_blank" title="Tweet"><img src="/Content/images/Twitter.png"></a></li>
+				  <li><a href="https://plus.google.com/share?url=@videoUrl" target="_blank" title="Share on Google+"><img src="/Content/images/Google.png"></a></li>
+				  <li><a href="http://www.tumblr.com/share?v=3&u=@videoUrl&t=@Model.Title&s=" target="_blank" title="Post to Tumblr"><img src="/Content/images/Tumblr.png"></a></li>
+				</ul>
+			 </div>
+			 <div class="control-group">
+                 <label class="control-label">
+                     <span>Title: </span> @Model.Title
+                 </label>
+             </div>
+             <div class="control-group">
+                 <label class="control-label">
+                     <span>Description: </span> @Model.Description
+                 </label>
+             </div>
+             <div class="control-group">
+                 <label class="control-label">
+                     <span>Rate: </span> @Model.Vote
+                 </label>
+             </div>
+             <div class="control-group">
+                 <label class="control-label">
+                     <span>Release Date: </span> @Model.ReleaseDate
+                 </label>
+             </div>
+         </div>
+     </div>
+     <div>
+         
+     </div>
+     <div class="row Video-Trailer">
+         <iframe width="510" height="315"
+                 src="http://www.youtube.com/embed/@Model.EmbededTrailer?autoplay=1"></iframe>
+     </div>
+
+    </div>

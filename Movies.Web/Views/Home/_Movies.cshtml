@@ -1,0 +1,32 @@
+﻿
+@model List<Movies.Models.RepositoryModel.MovieModel>
+
+    <div class="CacheStatus">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h5>
+                <span id="loadsource" class="label label-info">@ViewBag.MoviesSource</span>
+            </h5>
+        </div>
+    </div>
+    <div>
+        @foreach (var movie in Model)
+        {
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                @{
+                    var title = movie.Title.Replace("'", " ").Replace("\""," ");
+                }
+                <div class="ImageCard" onclick=" loadMovieDetails('@title', '@movie.Id') ">
+                    <figure>
+                        <img src="/Content/Images/default-poster.png" data-original="@movie.PosterUrl" class="lazy img-responsive" alt="@movie.Title"/>
+                    </figure>
+                    <h3 class="imageTitle">@movie.Title</h3>
+                </div>
+            </div>
+        }
+    </div>
+
+<script>
+    $(function() {
+        $("img.lazy").lazyload();
+    });
+</script>

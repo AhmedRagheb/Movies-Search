@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@Html.AntiForgeryToken()
+
+<div class="Header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-sm-8 col-md-7 col-lg-7">
+                @Html.TextBox("tags", ViewData["tags"], new { placeholder = "Search Movies", @class = "form-control" })
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+                <h5>
+                    <span id="status" class="label label-info"></span>
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    
+    <div class="row">
+        <div id="movies">
+
+        </div>
+    </div>
+    
+    <div class="modal fade" id="MovieDetailsModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title" id="myModalLabel"></h4>
+                        </div>
+                        <div id="MovieDetailsData" class="modal-body">
+                            <div style="text-align: center">
+                                <img src="../../Content/Images/ajax-loader.gif"/>
+                            </div>
+                        </div>
+               
+                    </div>
+                </div>
+            </div>
+</div>
+
+
+

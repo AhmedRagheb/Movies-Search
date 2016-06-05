@@ -1,0 +1,84 @@
+﻿body {
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+    margin: 0;
+    background: url("Images/background.jpg") center center fixed;
+}
+
+.imageTitle {
+    color: white;
+    text-align: center;
+    vertical-align: central;
+    background: black;
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    margin: 0;
+    left: 0;
+
+}
+
+.ImageCard {
+    background: rgba(0,0,0,.3);
+    height: 380px;
+    border: 0.4px solid gray;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.ImageCard figure {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: inherit;
+    overflow: hidden;
+}
+
+.Header {
+    background: rgba(177, 177, 177, 0.7);
+    height: 70px;
+    padding: 20px 0px;
+}
+
+.CacheStatus {
+    margin-bottom: 20px;
+}
+
+.Header input {
+    border-radius: 0px !important;
+}
+
+.Video-Trailer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.Video-Form {
+    font-size: 11px;
+}
+
+#VideoInfo Span {
+    color: blue;
+}
+
+ul.share-buttons{
+  list-style: none;
+  padding: 0;
+}
+
+ul.share-buttons li{
+  display: inline;
+}
+
+/*@media (min-width: 768px) {
+    .col-sm-2 {
+        width: 20%;
+    }
+
+    .ImageCard {
+        height: 250px;
+    }
+}*/

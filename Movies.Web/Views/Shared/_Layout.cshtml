@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>@ViewBag.Title</title>
+
+    <meta name="description" content="Movies DB Seach" />
+    <meta itemprop="name" content="Movies">
+    <meta itemprop="description" content="Movies">
+    <meta name="TimeStamp" content="@DateTime.Now" />
+    <meta name="google" value="notranslate">
+    <meta http-equiv="content-language" content="En">
+    
+
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    @RenderBody()
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
