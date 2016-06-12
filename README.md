@@ -1,6 +1,6 @@
 <h1>Movies-Search</h1>
 <p>
-Movies App is a web application search for movies, used two services (Omdb, themoviesDB) and enabled user to check the movie details (rate, description, release date), watch movie trailer (YouTube service) and share trailer on social media channels. 
+Movies App is a web application search for movies, used two services (<a href="http://www.omdbapi.com/">Omdb</a>, <a href="https://www.themoviedb.org">themoviesDB</a>) and enabled user to check the movie details (rate, description, release date), watch movie trailer (<a href="https://developers.google.com/youtube/">YouTube service</a>) and share trailer on social media channels. 
 </p>
 
 <ul>
